@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Excel表格操作</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="more" style="width: 90%;margin: 20px auto;">
+			<input type="button" id="yesButton" value="确认修改"/>
+			<input type="button" id="addRow" value="添加一行"/>
+			<input type="button" id="addCell" value="添加一列"/>
+			<input type="button" id="removeRow" value="删除选中行" disabled/>
+			<input type="button" id="addCell" value="删除一列"/>
+		</div>
+		
+		<table id="tab" cellspacing="0" cellpadding="0" width="90%">
+			<tbody>
+				<tr>
+					<th> <input type="checkbox" name="checkboxAll" id="checkboxAll"  /> </th>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+					<th>手机号</th>
+				</tr>
+				<tr>
+					<td> <input type="checkbox" name="checkboxs" class="checkboxs"  /> </td>
+					<td>Data1</td>
+					<td>12</td>
+					<td>男</td>
+					<td>12345678911</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox" name="checkboxs" class="checkboxs" value="" /> </td>
+					<td>Data2</td>
+					<td>11</td>
+					<td>男</td>
+					<td>12345678911</td>
+				</tr>
+				<tr>
+					<td> <input type="checkbox" name="checkboxs" class="checkboxs" value="" /> </td>
+					<td>Data3</td>
+					<td>13</td>
+					<td>男</td>
+					<td>12345678911</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<script src="js/myquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

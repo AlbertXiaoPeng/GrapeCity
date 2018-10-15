@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+html #warp,
+body #warp {
+  width: 1200px;
+  height: 500px;
+  background-color: #ee3a4c;
+  margin: 0 auto;
+  display: block;
+  padding-top: 1px;
+}
+html #warp #eyebox,
+body #warp #eyebox {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+html #warp #eyebox .eyes,
+body #warp #eyebox .eyes {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 100%;
+  border: 4px solid #fff;
+  margin: 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+html #warp #eyebox .eyes .spin,
+body #warp #eyebox .eyes .spin {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 37.5px;
+  top: 37.5px;
+}
+html #warp #mouth,
+body #warp #mouth {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #770f1a;
+  border-radius: 0 0 100px 100px;
+  margin-top: 30px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+html #warp #mouth #tooth,
+body #warp #mouth #tooth {
+  background-color: #fff;
+  transition: all .4s;
+  height: 33px;
+  width: 33px;
+  margin-left: 56px;
+  position: relative;
+}
+html #warp #mouth #tooth::after,
+body #warp #mouth #tooth::after {
+  content: "";
+  background-color: #fff;
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  z-index: 10000;
+}
+html #warp #mouth #tongue,
+body #warp #mouth #tongue {
+  transition: all .4s;
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  border-radius: 100%;
+  margin-top: 40px;
+  margin-left: 15px;
+  display: inline-block;
+  position: relative;
+}
+html #warp #mouth #tongue:after,
+body #warp #mouth #tongue:after {
+  content: '';
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+}
+html #warp #mouth:hover,
+body #warp #mouth:hover {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  transition: all 0.5s;
+  margin-top: 62.5px;
+}
+html #warp #mouth:hover #tooth,
+body #warp #mouth:hover #tooth {
+  margin-left: -25px;
+  margin-top: -40px;
+  transition: all .4s;
+}
+html #warp #mouth:hover #tooth,
+body #warp #mouth:hover #tooth {
+  transition: all .4s;
+  margin-right: -50px;
+}
+/*# sourceMappingURL=index.css.map */
