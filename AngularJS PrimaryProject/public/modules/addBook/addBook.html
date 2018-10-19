@@ -1,0 +1,29 @@
+<div ng-controller="addBookController" style="text-align: left;max-width: 600px;margin: 10px auto">
+	<h3> {{edit==true?"编辑":"添加"}}书籍 </h3>
+	<form name="addForm">
+		<div class="form-group">
+			<label for="example1">书名</label>
+			<input type="text" class="form-control" name="bookName" ng-model="bookName" id="example1" placeholder="请输入书名" required ng-maxlength="30">
+			<div ng-messages="addForm.bookName.$error">
+				<div class="alert alert-danger" role="alert" ng-message="required">
+					请输入名称
+				</div>
+				<div class="alert alert-danger" role="alert" ng-message="maxlength">
+					最大程度30位
+				</div>
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="custom-file">
+				<input type="file" accept="image/*" class="custom-file-input" file-model="uploadFile" id="inputGroupFile04">
+				<label class="custom-file-label" for="inputGroupFile04">{{filename}}</label>
+			</div>
+			<a ng-show="edit" title="下载" type="button" class="btn btn-secondary iconfont icon-download" href="{{imgurl}}" download="{{imgurl}}"></a>
+		</div>
+		<div class="alert alert-danger" role="alert" ng-show="error">
+			表单请填写完
+		</div>
+		<br />
+		<button ng-click="postForm()" type="button" class="btn btn-primary">保存</button>
+	</form>
+</div>

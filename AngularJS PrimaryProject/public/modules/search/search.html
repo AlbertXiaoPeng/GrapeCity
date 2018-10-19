@@ -1,0 +1,27 @@
+<div ng-controller="searchController" style="max-width: 600px;margin: 10px auto">
+	<h3> 查找书籍 </h3>
+	<div class="input-group mb-3">
+		<input type="text" class="form-control" ng-model="keywords" placeholder="Search Keywords" aria-label="Recipient's username" aria-describedby="basic-addon2">
+		<div class="input-group-append">
+			<button class="btn btn-outline-secondary" type="button" ng-click="searchFun()">搜索</button>
+		</div>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">序号</th>
+				<th scope="col">书名</th>
+				<th scope="col">图片</th>
+				<th scope="col">修改时间</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in dataList">
+				<th scope="row">{{$index+1}}</th>
+				<td>{{item.name}}</td>
+				<td><img class="bookImg" src="{{item.imgurl}}" alt="封面图片"></td>
+				<td>{{item.updatetime}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

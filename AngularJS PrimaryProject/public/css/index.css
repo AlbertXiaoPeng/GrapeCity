@@ -1,0 +1,21 @@
+#main{
+    max-width: 600px;
+    margin: 20px auto;
+}
+#main form{
+    margin: 30px auto;
+}
+#view{
+    text-align: center;
+    padding: 0 auto;
+}
+.alert{
+    margin: 5px auto;
+}
+.bookImg{
+    display: inline-block;
+    height : auto;
+    max-height: 30px;
+    max-width: 80%;
+    width: auto;
+}

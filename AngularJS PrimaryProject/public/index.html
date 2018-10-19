@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-messages.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+			  rel="stylesheet">
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_876421_p5kpowtbny.css">
+		<script src="./js/index.js"></script>
+		<script src="./js/addBook.js"></script>
+		<script src="./js/list.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="main" ng-controller="MainController">
+			<button type="button" class="btn btn-primary" ng-click="home()">首页</button>
+			<button type="button" class="btn btn-primary" ng-click="searchs()">搜索书籍</button>
+			<button type="button" class="btn btn-primary" ng-click="bookList()">书籍列表</button>
+			<button type="button" class="btn btn-primary" ng-click="addBook()">添加书籍</button>
+		</div>
+		<div id="view" ui-view>
+
+		</div>
+	</body>
+</html>

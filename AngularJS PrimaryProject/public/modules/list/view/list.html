@@ -1,0 +1,36 @@
+<div ng-controller="listController" style="max-width: 600px;margin: 10px auto">
+	<h3> 书籍列表 </h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">序号</th>
+				<th scope="col">书名</th>
+				<th scope="col">图片</th>
+				<th scope="col">修改时间</th>
+				<th scope="col">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in dataList">
+				<th scope="row">{{$index+1}}</th>
+				<td>{{item.name}}</td>
+				<td><img class="bookImg" ng-src="{{item.imgurl}}" alt="封面图片"></td>
+				<td>{{item.updatetime}}</td>
+				<td>
+					<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-primary" ng-click="editInfo(item.id)">编辑</button>
+					&emsp;
+					<button type="button" class="btn btn-danger" ng-click="deleteBook(item.id)">删除</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<nav aria-label="Page navigation example" style="margin: 10px auto;">
+		<ul class="pagination">
+			<li ng-class="{'page-item':true,active:item==pageNumber}" ng-repeat="item in pageList" data-v="{{item}}" ng-click="clickNumber(item)">
+				<a class="page-link">{{item}}</a>
+			</li>
+		</ul>
+	</nav>
+</div>
